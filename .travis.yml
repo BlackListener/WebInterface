@@ -1,15 +1,14 @@
 language: node_js
 node_js:
-  - "9"
+  - node
 cache:
   directories:
     - node_modules
+sudo: false
 install: npm install
 script:
-  - bash ./deploy/deploy.sh
+  - 'bash ./deploy/deploy.sh'
 env:
   global:
     - ENCRYPTION_LABEL: "8e76f2690904"
     - COMMIT_AUTHOR_EMAIL: "yuta20030801@icloud.com"
-dist: trusty
-sudo: false
