@@ -11,5 +11,5 @@ script:
   - 'bash ./deploy/deploy.sh'
 env:
   global:
-    - ENCRYPTION_LABEL: "8e76f2690904"
-    - COMMIT_AUTHOR_EMAIL: "yuta20030801@icloud.com"
+    - ENCRYPTION_LABEL: "f59a7f69f837"
+    - COMMIT_AUTHOR_EMAIL: "yuta030801@gmail.com"
