@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="section no-pad-bot" id="index-banner">
+    <div class="section no-pad-bot">
       <div class="container">
         <br><br>
         <h1 class="header center orange-text">データ照会</h1>
@@ -24,11 +24,11 @@
               <tbody>
                 <tr>
                   <td>ユーザーネーム</td>
-                  <td id="username">{{ this.user.username }}</td>
+                  <td>{{ this.user.username }}</td>
                 </tr>
                 <tr>
                   <td>アカウント作成</td>
-                  <td id="createdAt"></td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
