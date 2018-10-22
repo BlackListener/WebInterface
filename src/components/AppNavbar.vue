@@ -1,6 +1,7 @@
 <template>
   <nav class="gray lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BlackListener</a>
+    <div class="nav-wrapper container">
+      <router-link to="/" id="logo-container" class="brand-logo">BlackListener</router-link>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">{{ $t('AppNavbar.login') }}</a></li>
       </ul>
