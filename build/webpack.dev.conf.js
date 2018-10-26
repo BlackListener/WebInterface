@@ -25,7 +25,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+        { to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+        { to: path.posix.join(config.dev.assetsPublicPath, '404.html') },
       ],
     },
     hot: true,
@@ -54,6 +55,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      filename: '404.html',
       template: 'index.html',
       inject: true
     }),
