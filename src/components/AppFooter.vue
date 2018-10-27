@@ -29,7 +29,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="https://github.com/rht0910">rht0910</a>
+        Made by <a class="orange-text text-lighten-3" href="https://github.com/rht0910">rht0910</a>
       </div>
     </div>
   </footer>
@@ -37,6 +37,6 @@
 
 <script>
 export default {
-  name: 'app-footer',
+  name: 'AppFooter',
 }
 </script>

@@ -8,8 +8,8 @@
           <h5 class="header col s12 light">BlackListenerボットの<a href="https://go.blacklistener.tk/go/commands/lookup">lookupコマンド</a>とほとんど同じ動きをします。</h5>
         </div>
         <div class="row center">
-          <input type="text" v-model="user_id" placeholder="ユーザーID" />
-          <button @click="find" class="btn-large waves-effect waves-light orange">検索</button>
+          <input v-model="user_id" type="text" placeholder="ユーザーID">
+          <button class="btn-large waves-effect waves-light orange" @click="find">検索</button>
         </div>
         <br><br>
       </div>
@@ -24,11 +24,11 @@
               <tbody>
                 <tr>
                   <td>ユーザーネーム</td>
-                  <td>{{ this.user.username }}</td>
+                  <td>{{ user.username }}</td>
                 </tr>
                 <tr>
                   <td>アカウント作成</td>
-                  <td></td>
+                  <td />
                 </tr>
               </tbody>
             </table>
@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: 'lookup',
+  name: 'Lookup',
   data: function() {
     return {
       user_id: '',
@@ -70,7 +70,6 @@ export default {
   },
   methods: {
     async find() {
-      console.log('haha')
       const res = await fetch('https://compute.blacklistener.tk/data/users/' + this.user_id + '/config.json')
       this.user = await res.json()
     },

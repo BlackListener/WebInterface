@@ -17,7 +17,7 @@
 import M from 'materialize-css/dist/js/materialize.min.js'
 
 export default {
-  name: 'app-navbar',
+  name: 'AppNavbar',
   mounted: () => {
     M.Sidenav.init(document.querySelectorAll('.sidenav'))
   },
