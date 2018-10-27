@@ -18,8 +18,16 @@ import M from 'materialize-css/dist/js/materialize.min.js'
 
 export default {
   name: 'AppNavbar',
-  mounted: () => {
+  data() {
+    return {
+      instances: null,
+    }
+  },
+  mounted() {
     M.Sidenav.init(document.querySelectorAll('.sidenav'))
+  },
+  beforeDestroy() {
+    this.instances.forEach(instance => instance.destroy())
   },
 }
 </script>
