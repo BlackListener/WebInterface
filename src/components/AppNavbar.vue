@@ -3,10 +3,10 @@
     <div class="nav-wrapper container">
       <router-link to="/" class="brand-logo">BlackListener</router-link>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">{{ $t('AppNavbar.login') }}</a></li>
+        <li><a v-t="'AppNavbar.login'" href="#" /></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">{{ $t('AppNavbar.login') }}</a></li>
+        <li><a v-t="'AppNavbar.login'" href="#" /></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
