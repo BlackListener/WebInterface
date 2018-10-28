@@ -15,6 +15,7 @@
     "build:report": "cross-env npm_config_report=true node build/build.js"
   },
   "dependencies": {
+    "browser-lang": "^0.0.1",
     "materialize-css": "^1.0.0-rc.2",
     "vue": "^2.5.2",
     "vue-analytics": "^5.16.0",

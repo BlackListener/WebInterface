@@ -1,0 +1,28 @@
+{
+  "AppNavbar": {
+    "login": "Login"
+  },
+  "AppFooter": {
+    "what_features": "What's BlackListener's features?",
+    "features": "Antispam(Disabled), Global Banning, Delete Message(Specify by number), And other things!",
+    "links": "Links",
+    "documentation": "Documentation",
+    "invite": "Invite",
+    "bug_tracker": "Bug tracker",
+    "settings": "Settings"
+  },
+  "HomePage": {
+    "subtitle": "Bot that a Global BAN can do",
+    "invite": "Invite",
+    "share_ban": "Share a BAN",
+    "share_ban_desc": "Vandalism is a very troubling existence for the server. Let's share the BAN with this bot.",
+    "info_inquiry": "Easy to find information",
+    "info_inquiry_desc": "Everyone can easily see the user's BAN information etc (future system).",
+    "visualization_setting": "Visualization of Server settings",
+    "visualization_setting_desc": "It is represented not by text but by more obvious things."
+  },
+  "UnknownRoutePage": {
+    "not_exists": "Specified page does not exist.",
+    "back_to_top": "Back to top page"
+  }
+}

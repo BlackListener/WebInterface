@@ -1,0 +1,28 @@
+{
+  "AppNavbar": {
+    "login": "ログイン"
+  },
+  "AppFooter": {
+    "what_features": "BlackListenerの機能は？",
+    "features": "アンチスパム(休止中)、グローバルBAN、メッセージ削除(数で指定)、その他の機能も。",
+    "links": "リンク",
+    "documentation": "説明書",
+    "invite": "招待",
+    "bug_tracker": "バグトラッカー",
+    "settings": "設定"
+  },
+  "HomePage": {
+    "subtitle": "グローバルBANが可能なDiscordボット",
+    "invite": "招待",
+    "share_ban": "BANの共有",
+    "share_ban_desc": "荒らしはサーバーにとってとても厄介な存在です。そしてBANをこのボットを使って共有しましょう。",
+    "info_inquiry": "簡単な情報照会",
+    "info_inquiry_desc": "誰でも簡単に、ユーザーのBAN情報などを見れるようにしよう(未来系)。",
+    "visualization_setting": "サーバー設定を可視化",
+    "visualization_setting_desc": "あのテキストベースではなくもっとわかりやすいもので表されます。"
+  },
+  "UnknownRoutePage": {
+    "not_exists": "指定されたページは存在しません。",
+    "back_to_top": "トップへ戻る"
+  }
+}

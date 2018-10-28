@@ -3,21 +3,21 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">BlackListenerの機能は？</h5>
-          <p class="grey-text text-lighten-4">アンチスパム(休止中)、グローバルBAN、メッセージ削除(数で指定)、その他の機能も。</p>
+          <h5 v-t="'AppFooter.what_features'" class="white-text" />
+          <p v-t="'AppFooter.features'" class="grey-text text-lighten-4" />
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text"><i class="material-icons">link</i>リンク</h5>
+          <h5 class="white-text"><i class="material-icons">link</i>{{ $t('AppFooter.links') }}</h5>
           <ul>
-            <li><a class="white-text" href="http://docs.blacklistener.tk/">説明書(ReadTheDocs)</a></li>
-            <li><a class="white-text" href="https://discordapp.com/oauth2/authorize?client_id=456966161079205899&permissions=8&scope=bot">招待</a></li>
+            <li><a v-t="'AppFooter.documentation'" class="white-text" href="http://docs.blacklistener.tk/" /></li>
+            <li><a v-t="'AppFooter.invite'" class="white-text" href="https://discordapp.com/oauth2/authorize?client_id=456966161079205899&permissions=8&scope=bot" /></li>
             <li><a class="white-text" href="https://github.com/BlackListener/BlackListener">GitHub</a></li>
-            <li><a class="white-text" href="https://bugs.rht0910.tk/projects/BL/issues/?filter=allopenissues">バグトラッカー</a></li>
+            <li><a v-t="'AppFooter.bug_tracker'" class="white-text" href="https://bugs.rht0910.tk/projects/BL/issues/?filter=allopenissues" /></li>
             <li><a class="white-text" href="https://discordapp.com">Discord</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text"><i class="material-icons">settings</i>設定</h5>
+          <h5 class="white-text"><i class="material-icons">settings</i>{{ $t('AppFooter.settings') }}</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
