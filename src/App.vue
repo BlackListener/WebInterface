@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ dark: darkMode }">
     <app-navbar />
     <transition name="fade">
       <router-view />
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import AppNavbar from './components/AppNavbar.vue'
 import AppFooter from './components/AppFooter.vue'
 
@@ -18,6 +19,7 @@ export default {
     AppNavbar,
     AppFooter,
   },
+  computed: mapState(['darkMode']),
 }
 </script>
 
@@ -28,6 +30,19 @@ export default {
 
 .section .btn-large {
   background-color: #ff9800!important;
+}
+
+.dark {
+  background-color: #303030;
+  color: #d0d0d0;
+}
+
+.dark .section h1 {
+  color: #2196F3!important;
+}
+
+.dark .section .btn-large {
+  background-color: #2196F3!important;
 }
 
 .fade-enter-active, .fade-leave-active {

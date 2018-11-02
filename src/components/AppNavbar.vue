@@ -31,3 +31,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.dark nav {
+  background-color: #101010;
+  color: #c0c0c0;
+}
+</style>

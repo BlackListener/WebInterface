@@ -22,7 +22,7 @@
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!" @click="toggleDarkMode">Link 4</a></li>
           </ul>
         </div>
       </div>
@@ -36,8 +36,11 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'AppFooter',
+  methods: mapMutations(['toggleDarkMode']),
 }
 </script>
 
@@ -48,5 +51,14 @@ footer {
 
 .footer-copyright a {
   color: #ffcc80!important;
+}
+
+.dark footer {
+  color: #c0c0c0!important;
+  background-color: #101010!important;
+}
+
+.dark .footer-copyright a {
+  color: #d0d0d0!important;
 }
 </style>
