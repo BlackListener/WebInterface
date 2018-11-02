@@ -22,7 +22,7 @@
             <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!" @click="toggleDarkMode">Link 4</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>
@@ -30,16 +30,20 @@
     <div class="footer-copyright">
       <div class="container">
         Made by <a href="https://github.com/rht0910">rht0910</a>
+        <span class="right brightness" @click="toggleDarkMode">
+          {{ !darkMode ? 'Dark' : 'Light' }} Mode
+        </span>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'AppFooter',
+  computed: mapState(['darkMode']),
   methods: mapMutations(['toggleDarkMode']),
 }
 </script>
@@ -60,5 +64,10 @@ footer {
 
 .dark .footer-copyright a {
   color: #d0d0d0!important;
+}
+
+.brightness {
+  cursor: pointer;
+  user-select: none;
 }
 </style>
