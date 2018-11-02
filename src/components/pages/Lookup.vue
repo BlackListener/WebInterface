@@ -3,13 +3,13 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center orange-text">データ照会</h1>
+        <h1 class="header center">データ照会</h1>
         <div class="row center">
           <h5 class="header col s12 light">BlackListenerボットの<a href="https://go.blacklistener.tk/go/commands/lookup">lookupコマンド</a>とほとんど同じ動きをします。</h5>
         </div>
         <div class="row center">
           <input v-model="user_id" type="text" placeholder="ユーザーID">
-          <button class="btn-large waves-effect waves-light orange" @click="find">検索</button>
+          <button class="btn-large waves-effect waves-light" @click="find">検索</button>
         </div>
         <br><br>
       </div>

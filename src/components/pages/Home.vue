@@ -3,12 +3,12 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center orange-text">BlackListener</h1>
+        <h1 class="header center">BlackListener</h1>
         <div class="row center">
           <h5 v-t="'HomePage.subtitle'" class="header col s12 light" />
         </div>
         <div class="row center">
-          <a href="https://discordapp.com/oauth2/authorize?client_id=456966161079205899&permissions=8&scope=bot" class="btn-large waves-effect waves-light orange">招待</a>
+          <a href="https://discordapp.com/oauth2/authorize?client_id=456966161079205899&permissions=8&scope=bot" class="btn-large waves-effect waves-light">招待</a>
         </div>
         <br><br>
 

@@ -2,12 +2,12 @@
   <div class="section no-pad-bot">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">404 Not Found</h1>
+      <h1 class="header center">404 Not Found</h1>
       <div class="row center">
         <h5 v-t="'UnknownRoutePage.not_exists'" class="header col s12 light" />
       </div>
       <div class="row center">
-        <router-link v-t="'UnknownRoutePage.back_to_top'" to="/" class="btn-large waves-effect waves-light orange" />
+        <router-link v-t="'UnknownRoutePage.back_to_top'" to="/" class="btn-large waves-effect waves-light" />
       </div>
       <br><br>
     </div>

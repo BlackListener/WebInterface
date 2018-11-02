@@ -22,6 +22,14 @@ export default {
 </script>
 
 <style>
+.section h1 {
+  color: #ff9800!important;
+}
+
+.section .btn-large {
+  background-color: #ff9800!important;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;

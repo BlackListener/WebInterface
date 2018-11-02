@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer orange">
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -29,7 +29,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        Made by <a class="orange-text text-lighten-3" href="https://github.com/rht0910">rht0910</a>
+        Made by <a href="https://github.com/rht0910">rht0910</a>
       </div>
     </div>
   </footer>
@@ -40,3 +40,13 @@ export default {
   name: 'AppFooter',
 }
 </script>
+
+<style>
+footer {
+  background-color: #ff9800!important;
+}
+
+.footer-copyright a {
+  color: #ffcc80!important;
+}
+</style>
