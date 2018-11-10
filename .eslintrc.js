@@ -32,9 +32,7 @@ module.exports = {
     'vue/html-closing-bracket-spacing': [2, {
       selfClosingTag: 'always'
     }],
-    'vue/max-attributes-per-line': [2, {
-      singleline: 3,
-    }],
+    'vue/max-attributes-per-line': 0,
     'semi': [2, 'never'],
     'indent': [2, 2],
     'quotes': [2, 'single'],

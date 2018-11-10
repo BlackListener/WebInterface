@@ -21,6 +21,21 @@
     "visualization_setting": "サーバー設定を可視化",
     "visualization_setting_desc": "あのテキストベースではなくもっとわかりやすいもので表されます。"
   },
+  "LookupPage": {
+    "info_inquiry": "データ照会",
+    "info_inquiry_desc": "ユーザーの評価値、BAN情報、その他ユーザー情報などを確認できます。",
+    "user_id": "ユーザーID",
+    "search": "検索",
+    "res_tag": "ユーザータグ",
+    "res_rep": "評価値",
+    "res_name_log": "名前変更履歴",
+    "res_bot": "ボットかどうか",
+    "res_created": "作成日時",
+    "res_ban_servers": "BANされたサーバー (オーナー)",
+    "res_ban_users": "BANを実行したユーザー",
+    "res_ban_probes": "証拠",
+    "res_ban_reasons": "理由"
+  },
   "UnknownRoutePage": {
     "not_exists": "指定されたページは存在しません。",
     "back_to_top": "トップへ戻る"

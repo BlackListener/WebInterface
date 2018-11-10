@@ -3,67 +3,66 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center">データ照会</h1>
+        <h1 v-t="'LookupPage.info_inquiry'" class="header center" />
         <div class="row center">
-          <h5 class="header col s12 light">BlackListenerボットの<a href="https://go.blacklistener.tk/go/commands/lookup">lookupコマンド</a>とほとんど同じ動きをします。</h5>
+          <h5 v-t="'LookupPage.info_inquiry_desc'" class="header col s12 light" />
         </div>
         <div class="row center">
-          <input v-model="user_id" type="text" placeholder="ユーザーID">
-          <button class="btn-large waves-effect waves-light" @click="find">検索</button>
+          <input v-model="user_id" :placeholder="$t('LookupPage.user_id')" type="text" class="center">
+          <button v-t="'LookupPage.search'" class="btn-large waves-effect waves-light" @click="find" />
         </div>
         <br><br>
       </div>
     </div>
 
-    <div v-if="user.id" class="container">
+    <div v-if="user.tag" class="container">
       <div class="section">
         <table>
           <tbody>
             <tr>
-              <th>評価値</th>
-              <td>{{ user.rep }}</td>
+              <th v-t="'LookupPage.res_tag'" />
+              <td v-text="user.tag" />
             </tr>
             <tr>
-              <th>ユーザータグ</th>
-              <td>{{ user.tag }}</td>
+              <th v-t="'LookupPage.res_rep'" />
+              <td v-text="user.rep" />
             </tr>
             <tr>
-              <th>ユーザーID</th>
-              <td>{{ user.id }}</td>
+              <th v-t="'LookupPage.res_name_log'" />
+              <td>
+                <ul style="margin: 0;">
+                  <li v-for="log in user.username_changes" :key="log" v-text="log" />
+                </ul>
+              </td>
             </tr>
-            <tr>
-              <th>名前変更</th>
-              <td>{{ user.username_changes }}</td>
-            </tr>
-            <tr>
+            <tr v-t="'LookupPage.res_bot'">
               <th>ボットかどうか</th>
-              <td>{{ user.bot }}</td>
+              <td v-text="user.bot ? 'はい' : 'いいえ'" />
             </tr>
             <tr>
-              <th>作成日時</th>
-              <td>{{ user.createdTimestamp }}</td>
-            </tr>
-            <tr>
-              <th>現在の日時</th>
-              <td>{{ now }}</td>
+              <th v-t="'LookupPage.res_created'" />
+              <td v-text="new Date(user.createdTimestamp).toLocaleString()" />
             </tr>
           </tbody>
         </table>
         <table class="striped">
           <thead>
             <tr>
-              <th>BANされたサーバー (オーナー)</th>
-              <th>BANを実行したユーザー</th>
-              <th>証拠一覧</th>
-              <th>理由一覧</th>
+              <th v-t="'LookupPage.res_ban_servers'" />
+              <th v-t="'LookupPage.res_ban_users'" />
+              <th v-t="'LookupPage.res_ban_probes'" />
+              <th v-t="'LookupPage.res_ban_reasons'" />
             </tr>
           </thead>
           <tbody>
+            <tr v-if="!user.bannedFromUser.length">
+              <td colspan="4" class="center">BANされていません</td>
+            </tr>
             <tr v-for="(ban, i) in user.bannedFromServer" :key="ban">
-              <td>{{ user.bannedFromServer[i] }} ({{ user.bannedFromServerOwner[i] }})</td>
-              <td>{{ user.bannedFromUser[i] }}</td>
-              <td>{{ user.probes[i] }}</td>
-              <td>{{ user.reasons[i] }}</td>
+              <td v-text="`${user.bannedFromServer[i]} (${user.bannedFromServerOwner[i]})`" />
+              <td v-text="user.bannedFromUser[i]" />
+              <td v-text="user.probes[i]" />
+              <td v-text="user.reasons[i]" />
             </tr>
           </tbody>
         </table>
@@ -86,8 +85,6 @@ export default {
     async find() {
       const res = await fetch('https://api.blacklistener.tk/v1/users/' + this.user_id)
       this.user = await res.json()
-      this.user.id = this.user_id
-      this.now = new Date().toLocaleString()
     },
   },
 }

@@ -21,6 +21,21 @@
     "visualization_setting": "Visualization of Server settings",
     "visualization_setting_desc": "It is represented not by text but by more obvious things."
   },
+  "LookupPage": {
+    "info_inquiry": "Info Inquiry",
+    "info_inquiry_desc": "User's rating value, BAN information, other user information etc can be confirmed.",
+    "user_id": "User ID",
+    "search": "Search",
+    "res_tag": "User tag",
+    "res_rep": "Reputation",
+    "res_name_log": "Username changes",
+    "res_bot": "Whether bot or not",
+    "res_created": "Created time",
+    "res_ban_servers": "Server Name (Owner)",
+    "res_ban_users": "Banned By",
+    "res_ban_probes": "Probes",
+    "res_ban_reasons": "Reasons"
+  },
   "UnknownRoutePage": {
     "not_exists": "Specified page does not exist.",
     "back_to_top": "Back to top page"
