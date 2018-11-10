@@ -15,46 +15,59 @@
       </div>
     </div>
 
-    <div class="container">
+    <div v-if="user.id" class="container">
       <div class="section">
-
-        <div class="row">
-          <div class="col s12 m4">
-            <table>
-              <tbody>
-                <tr>
-                  <td>ユーザーネーム</td>
-                  <td>{{ user.username }}</td>
-                </tr>
-                <tr>
-                  <td>アカウント作成</td>
-                  <td />
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">簡単な情報照会</h5>
-
-              <p class="light">誰でも簡単に、ユーザーのBAN情報などを見れるようにしよう(未来系)。</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-              <h5 class="center">サーバー設定を可視化</h5>
-
-              <p class="light">あのテキストベースではなくもっとわかりやすいもので表されます。</p>
-            </div>
-          </div>
-        </div>
-
+        <table>
+          <tbody>
+            <tr>
+              <th>評価値</th>
+              <td>{{ user.rep }}</td>
+            </tr>
+            <tr>
+              <th>ユーザータグ</th>
+              <td>{{ user.tag }}</td>
+            </tr>
+            <tr>
+              <th>ユーザーID</th>
+              <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+              <th>名前変更</th>
+              <td>{{ user.username_changes }}</td>
+            </tr>
+            <tr>
+              <th>ボットかどうか</th>
+              <td>{{ user.bot }}</td>
+            </tr>
+            <tr>
+              <th>作成日時</th>
+              <td>{{ user.createdTimestamp }}</td>
+            </tr>
+            <tr>
+              <th>現在の日時</th>
+              <td>{{ now }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>BANされたサーバー (オーナー)</th>
+              <th>BANを実行したユーザー</th>
+              <th>証拠一覧</th>
+              <th>理由一覧</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(ban, i) in user.bannedFromServer" :key="ban">
+              <td>{{ user.bannedFromServer[i] }} ({{ user.bannedFromServerOwner[i] }})</td>
+              <td>{{ user.bannedFromUser[i] }}</td>
+              <td>{{ user.probes[i] }}</td>
+              <td>{{ user.reasons[i] }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <br><br>
     </div>
   </div>
 </template>
@@ -62,16 +75,19 @@
 <script>
 export default {
   name: 'Lookup',
-  data: function() {
+  data() {
     return {
       user_id: '',
       user: {},
+      now: '',
     }
   },
   methods: {
     async find() {
-      const res = await fetch('https://compute.blacklistener.tk/data/users/' + this.user_id + '/config.json')
+      const res = await fetch('https://api.blacklistener.tk/v1/users/' + this.user_id)
       this.user = await res.json()
+      this.user.id = this.user_id
+      this.now = new Date().toLocaleString()
     },
   },
 }
