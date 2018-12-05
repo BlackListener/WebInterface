@@ -41,7 +41,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'materialize-css/dist/css/materialize.css',
+    '~/assets/style/app.styl',
   ],
 
   /*
@@ -49,6 +49,7 @@ module.exports = {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '@/plugins/vuetify',
   ],
 
   /*
